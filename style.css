@@ -1,0 +1,100 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace, Arial, sans-serif;
+  background-color:lightseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Card that holds everything */
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Each label + input/select pair */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Row that holds From / Swap / To */
+.currency-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Swap button */
+#swap-btn {
+  padding: 10px 12px;
+  background-color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px; /* aligns with the selects, not the labels */
+}
+
+/* Convert button */
+#convert-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#convert-btn:hover {
+  background-color: #3a7bc8;
+}
+
+/* Result box */
+.result {
+  padding: 15px;
+  background-color: #f7f9fc;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}
