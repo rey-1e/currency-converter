@@ -11,6 +11,7 @@ window.addEventListener("load", async () => {
     let val = usable.usd["inr"];
 
     result.innerText = `${1} USD = ${val.toFixed(2)} INR`;
+    console.log(result.innerText);
 
 
 
@@ -65,7 +66,7 @@ convertBtn.addEventListener("click", async () => {
     let final = amount * conversionRate;
     final = final.toFixed(2);
     result.innerText = `${amount} ${fromInput} = ${final} ${toInput}`;
-
+    console.log(result.innerText);
 
 
 
