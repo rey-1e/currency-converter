@@ -1,3 +1,5 @@
+//the following content includes two-lettered notation for future flag reference.
+
 const countryList = {
   AED: "AE",
   AFN: "AF",
