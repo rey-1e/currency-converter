@@ -3,14 +3,25 @@ const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/
 let convertBtn = document.querySelector("#convert-btn");
 let dropdownFrom = document.querySelector("#from-currency");
 let dropdownTo = document.querySelector("#to-currency");
+let result = document.querySelector("#result");
 
+window.addEventListener("load", async () => {
+    let promise = await fetch(`${BASE_URL}/${"usd"}.json`)
+    let usable = await promise.json();
+    let val = usable.usd["inr"];
+
+    result.innerText = `${1} USD = ${val.toFixed(2)} INR`;
+
+
+
+})
 
 for(const currencyCode in countryList) {
     
     let newOptionFrom = document.createElement("option");
     newOptionFrom.innerText = currencyCode; 
     dropdownFrom.appendChild(newOptionFrom);
-    
+
     let newOptionTo = document.createElement("option");
     newOptionTo.innerText = currencyCode; 
     dropdownTo.appendChild(newOptionTo);
@@ -51,8 +62,9 @@ convertBtn.addEventListener("click", async () => {
     let conversionRate = usableObj.usd[toInputBetter];
 
     //query selector for the result field;
-    let result = document.querySelector("#result");
-    result.innerText = `${amount} ${fromInput} = ${amount * conversionRate} ${toInput}`;
+    let final = amount * conversionRate;
+    final = final.toFixed(2);
+    result.innerText = `${amount} ${fromInput} = ${final} ${toInput}`;
 
 
 
