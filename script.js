@@ -47,9 +47,13 @@ convertBtn.addEventListener("click", async () => {
     let usableObj = await calculation.json();
 
     let toInputBetter = toInput.toLowerCase()
-    console.log(usableObj.usd[toInputBetter]);
 
-    
+    let conversionRate = usableObj.usd[toInputBetter];
+
+    //query selector for the result field;
+    let result = document.querySelector("#result");
+    result.innerText = `${amount} ${fromInput} = ${amount * conversionRate} ${toInput}`;
+
 
 
 
