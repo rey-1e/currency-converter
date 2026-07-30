@@ -13,8 +13,6 @@ window.addEventListener("load", async () => {
     result.innerText = `${1} USD = ${val.toFixed(2)} INR`;
     console.log(result.innerText);
 
-
-
 })
 
 for(const currencyCode in countryList) {
@@ -31,7 +29,6 @@ for(const currencyCode in countryList) {
 
 convertBtn.addEventListener("click", async () => {
     
-
     //query selector for user's input field.
     let userInput = document.querySelector(".form-group input");
 
@@ -68,7 +65,4 @@ convertBtn.addEventListener("click", async () => {
     result.innerText = `${amount} ${fromInput} = ${final} ${toInput}`;
     console.log(result.innerText);
 
-
-
-    
 })
